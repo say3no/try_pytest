@@ -1,12 +1,8 @@
 # vim: set fileencoding=utf-8 :
-
-import pytest
-
-
-def f():
-    raise SystemExit(1)
+from src.hoge import Hoge
 
 
-def test_mytest():
-    with pytest.raises(SystemExit):
-        f()
+def test_constructor():
+    a = Hoge("a", 222)
+    print(a.a)
+    print(a.b)
