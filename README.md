@@ -12,8 +12,6 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 
 ## pydocってなに、どう書くの
 
-
-
 ```python
     def wrap_str(self, b):
         """
