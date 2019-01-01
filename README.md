@@ -35,9 +35,11 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 
 ```sh
 pip install Sphinx
+mkdir doc
+cd doc
 sphinx-quickstart #すげーだるい
+sphinx-build -b html . build
 ```
-
 
 ## pytestのconfigってどうなってるの
 
