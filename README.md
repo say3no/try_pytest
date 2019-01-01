@@ -33,7 +33,6 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 
 ## pydocの出力どうやんの
 
-
 ```sh
 pip install Sphinx
 sphinx-quickstart #すげーだるい
