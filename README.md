@@ -15,19 +15,45 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 ```sh
 $ ls -1
 README.md
-requirements.txt
+pytest.ini # conf
+requirements.dev.txt
 src
 tests
 virtualenv
 ```
 
-こういう構成にして、`tests`をウオッチしてタスクランナーを走らせたい。
+unitテストではこうらしい。
+>いくつかのパッケージの構成を見た限りでは、パッケージのディレクトリと同じ階層にテストディレクトリを作るのがセオリーらしい
+>[Python 3 標準の unittest でテストを書く際のディレクトリ構成 - Qiita](https://qiita.com/hoto17296/items/fa0166728177e676cd36)
+
+[pytest公式の考えはこれ](https://docs.pytest.org/en/latest/goodpractices.html)
+
+```sh
+setup.py
+src/
+    mypkg/
+        __init__.py
+        app.py
+        view.py
+tests/
+    __init__.py
+    foo/
+        __init__.py
+        test_view.py
+    bar/
+        __init__.py
+        test_view.py
+```
+
+上記のディレクトリ構成だと `tests/*`の中から`mypkg`を呼ぶにはひと手間必要で、公式では`setup.py`でそのあたりを定義しろと言っている。面倒だな。
+
+
 
 ## pytest-watch
 
 ```sh
 pip install pytest-watchdog
-
+ptw
 ```
 
 ## pytest-aiohttp
