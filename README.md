@@ -45,9 +45,13 @@ tests/
         test_view.py
 ```
 
-上記のディレクトリ構成だと `tests/*`の中から`mypkg`を呼ぶにはひと手間必要で、公式では`setup.py`でそのあたりを定義しろと言っている。面倒だな。
+上記のディレクトリ構成だと `tests/*`の中から`mypkg`を呼ぶにはひと手間必要で、公式では`setup.py`で`pythonpath`を定義しろと言っている?
 
+[pytest-pythonpth](https://github.com/bigsassy/pytest-pythonpath)があるので、こいつを使うことにする。`pytest.ini`をすこしいじるだけで済む。
 
+```sh
+pip install pytest-pythonpath
+```
 
 ## pytest-watch
 
