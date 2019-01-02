@@ -10,6 +10,9 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 
 まあこっちは後で読めばいいか。
 
+助かったやつ[pytest入門 - 闘うITエンジニアの覚え書き](https://www.magata.net/memo/index.php?pytest%C6%FE%CC%E7)
+
+
 ## pytest
 
 ```sh
@@ -22,11 +25,10 @@ tests
 virtualenv
 ```
 
-unitテストではこうらしい。
->いくつかのパッケージの構成を見た限りでは、パッケージのディレクトリと同じ階層にテストディレクトリを作るのがセオリーらしい
->[Python 3 標準の unittest でテストを書く際のディレクトリ構成 - Qiita](https://qiita.com/hoto17296/items/fa0166728177e676cd36)
+- unitテストでは`src/tests`という構成になるのだとか。
+    - >いくつかのパッケージの構成を見た限りでは、パッケージのディレクトリと同じ階層にテストディレクトリを作るのがセオリーらしい ( [Python 3 標準の unittest でテストを書く際のディレクトリ構成 - Qiita](https://qiita.com/hoto17296/items/fa0166728177e676cd36) )
 
-[pytest公式の考えはこれ](https://docs.pytest.org/en/latest/goodpractices.html)
+- [pytest公式の考えはこれ](https://docs.pytest.org/en/latest/goodpractices.html). `src`と`test`で分けるタイプ。
 
 ```sh
 setup.py
@@ -44,8 +46,6 @@ tests/
         __init__.py
         test_view.py
 ```
-
-上記のディレクトリ構成だと `tests/*`の中から`mypkg`を呼ぶにはひと手間必要で、公式では`setup.py`で`pythonpath`を定義しろと言っている?
 
 [pytest-pythonpth](https://github.com/bigsassy/pytest-pythonpath)があるので、こいつを使うことにする。`pytest.ini`をすこしいじるだけで済む。
 
