@@ -1,3 +1,13 @@
+from aiohttp import web
+
+routes = web.RouteTableDef()
+
+
+@routes.get('/')
+async def hello(request):
+    return web.Response(text="hello world")
+
+
 class Hoge:
     """ A simple example class """
 
@@ -12,7 +22,7 @@ class Hoge:
         Parameters
         ----------
         b : int
-            bなんすよ…。
+            bなんすよ…。aじゃないんすよ
 
         Returns
         -------

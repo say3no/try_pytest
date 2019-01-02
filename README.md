@@ -10,6 +10,32 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
 
 まあこっちは後で読めばいいか。
 
+## pytest
+
+```sh
+$ ls -1
+README.md
+requirements.txt
+src
+tests
+virtualenv
+```
+
+こういう構成にして、`tests`をウオッチしてタスクランナーを走らせたい。
+
+## pytest-watch
+
+```sh
+pip install pytest-watchdog
+
+```
+
+## pytest-aiohttp
+
+```sh
+pip install pytest-aiohttp
+```
+
 ## pydocってなに、どう書くの
 
 ```python
@@ -20,7 +46,7 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
         Parameters
         ----------
         b : int
-            bなんすよ…。
+            bなんすよ…。aじゃないんすよ
 
         Returns
         -------
@@ -31,7 +57,9 @@ testコードやファイルの参照規則はこちら: https://docs.pytest.org
         return str(b)
 ```
 
-## pydocの出力どうやんの
+### pydocの出力どうやんの
+
+とりあえず下記でできるようだけれど、俺にはまだ早い感じがするので飛ばす。
 
 ```sh
 pip install Sphinx
@@ -42,11 +70,3 @@ sphinx-build -b html . build
 cd ..
 sphinx-apidoc -F -o docs/ src/
 ```
-
-
-
-
-
-## pytestのconfigってどうなってるの
-
-## task-runnerみたいなやつとかどうなってるの
