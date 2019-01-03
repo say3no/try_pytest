@@ -1,4 +1,5 @@
 # vim: set fileencoding=utf-8 :
+from src.hoge import Hoge
 
 # @pytest.fixture(scope='session', autouse=True)
 # def session_fixture():
@@ -8,4 +9,7 @@
 
 
 def test_constractor():
-    assert True == True
+    a, b = (1, 2)
+    h = Hoge(a, b)
+    assert h.a == a
+    assert h.b == str(b)
