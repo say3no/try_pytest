@@ -12,6 +12,11 @@ def func(x):
     return x + 1
 
 
+"""
+ビルトインの機能である assert を使ったテスト
+"""
+
+
 def test_answer():
     assert func(4) == 5
 
