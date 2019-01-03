@@ -60,11 +60,15 @@ pip install pytest-watchdog
 ptw
 ```
 
-## pytest-aiohttp
+べんり
+
+## [pytest-aiohttp](https://aiohttp.readthedocs.io/en/stable/testing.html#pytest-example)
 
 ```sh
 pip install pytest-aiohttp
 ```
+
+おｋ，だいたいわかった。
 
 ## pydocってなに、どう書くの
 
