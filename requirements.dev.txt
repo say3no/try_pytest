@@ -1,4 +1,4 @@
-aiohttp==3.5.1
+aiohttp==3.7.4
 alabaster==0.7.12
 argh==0.26.2
 astroid==2.1.0
